@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Cormorant+Garamond:ital,wght@0,400;0,700;1,300&display=swap');
+/* Variables */
+:root {
+    --bodyFont: 'Cormorant Garamond', Cambria,  Times, 'Times New Roman', Georgia, Cochin, serif;
+    --headerFont: 'Cinzel','Cormorant Garamond', Cambria,  Times, 'Times New Roman', Georgia, Cochin, serif;
+    --darkGradient: linear-gradient(90deg, #86158A 0%, #3B28A9 100%);
+    --lightGradient: linear-gradient(90deg, #fc1782 0%, #118cff 100%);
+    --largeMargin: 2rem;
+    --smallMargin: 1rem;
+}
+
+/* Global */
+
+* {
+    font-family: var(--bodyFont);
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--headerFont);
+    margin-block:var(--smallMargin);
+    padding:unset;
+    letter-spacing: calc(var(--smallMargin)*.2);
+}
+p {
+    margin-block:var(--smallMargin);
+}
+body {
+    background-color: black;
+    color: white;
+    margin:0;
+}
+a {
+    color:unset;
+}
+/* Nav */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--lightGradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color:transparent;
+}
+nav > * {
+    margin-block: var(--smallMargin);
+}
+nav:first-child {
+    margin-inline-start: var(--largeMargin);
+}
+nav div:last-child {
+    margin-inline-end: var(--largeMargin);
+}
+/* Header */
+header {
+    background: var(--darkGradient);
+    background-image: url(./images/blue_space.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding-block: var(--largeMargin);
+    height: 100vh;
+}
+header img {
+    max-width: 50vw;
+}
+
+/* Main */
+main {
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-inline:var(--smallMargin);
+}
+/* Sections */
+/* 2 column section image right*/
+section {
+    display: flex;
+    justify-content: space-between;
+    margin-block: var(--smallMargin);
+}
+/* section  {
+    margin:var(--smallMargin);
+} */
+/* Article */
+article {
+    flex: 1 1 0;
+    margin: var(--smallMargin);
+}
+/* Figure */
+figure {
+    flex: 1 1 0;
+    margin:0;
+    background-image: url(./images/brea-viragh-author-1kx.jpg);
+    background-position: center;
+    background-size: cover;
+    margin: var(--smallMargin);
+}
+figure img {
+    display: none;
+    object-fit: cover;
+    object-position: left;
+    width:40vw;
+    height: 30vw;
+}
+/* Aside */
+
+/* Footer */
