@@ -31,6 +31,7 @@ body {
 a {
     color:unset;
 }
+
 /* Nav */
 nav {
     display: flex;
@@ -72,39 +73,19 @@ main {
     display:flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin-inline:var(--smallMargin);
+    
 }
-/* Sections */
-/* 2 column section image right*/
+/* Section */
 section {
     display: flex;
     justify-content: space-between;
-    margin-block: var(--smallMargin);
+    padding:var(--largeMargin);
 }
-/* section  {
-    margin:var(--smallMargin);
-} */
-/* Article */
-article {
-    flex: 1 1 0;
-    margin: var(--smallMargin);
+section img {
+    max-width: 50vw;
+    object-fit: scale-down;
 }
-/* Figure */
-figure {
-    flex: 1 1 0;
-    margin:0;
-    background-image: url(./images/brea-viragh-author-1kx.jpg);
-    background-position: center;
-    background-size: cover;
-    margin: var(--smallMargin);
-}
-figure img {
-    display: none;
-    object-fit: cover;
-    object-position: left;
-    width:40vw;
-    height: 30vw;
-}
+
 /* Aside */
 
 /* Footer */
