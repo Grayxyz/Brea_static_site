@@ -5,8 +5,10 @@
     --headerFont: 'Cinzel','Cormorant Garamond', Cambria,  Times, 'Times New Roman', Georgia, Cochin, serif;
     --darkGradient: linear-gradient(90deg, #86158A 0%, #3B28A9 100%);
     --lightGradient: linear-gradient(90deg, #fc1782 0%, #118cff 100%);
-    --largeMargin: 2rem;
-    --smallMargin: 1rem;
+    --spaceXL: 6rem;
+    --spaceL: 4rem;
+    --spaceM: 2rem;
+    --spaceS: 1rem;
 }
 
 /* Global */
@@ -16,9 +18,9 @@
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--headerFont);
-    margin-block:var(--smallMargin);
+    margin-block:var(--spaceM);
     padding:unset;
-    letter-spacing: calc(var(--smallMargin)*.2);
+    letter-spacing: calc(var(--spaceS)*.2);
 }
 p {
     margin-block:var(--smallMargin);
@@ -30,6 +32,9 @@ body {
 }
 a {
     color:unset;
+}
+figure {
+    margin: 0;
 }
 
 /* Nav */
@@ -43,13 +48,13 @@ nav {
     color:transparent;
 }
 nav > * {
-    margin-block: var(--smallMargin);
+    margin-block: var(--spaceS);
 }
 nav:first-child {
-    margin-inline-start: var(--largeMargin);
+    margin-inline-start: var(--spaceL);
 }
 nav div:last-child {
-    margin-inline-end: var(--largeMargin);
+    margin-inline-end: var(--spaceL);
 }
 /* Header */
 header {
@@ -61,7 +66,7 @@ header {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    padding-block: var(--largeMargin);
+    padding-block: var(--spaceM);
     height: 100vh;
 }
 header img {
@@ -73,19 +78,31 @@ main {
     display:flex;
     flex-direction: column;
     justify-content: flex-start;
-    
+   
 }
 /* Section */
 section {
-    display: flex;
-    justify-content: space-between;
-    padding:var(--largeMargin);
+    background-color: rgb(50, 44, 112,1);
+    padding: var(--spaceM) var(--spaceL) var(--spaceM) var(--spaceL);
 }
-section img {
-    max-width: 50vw;
-    object-fit: scale-down;
+article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spaceL);
+    text-align: justify;
 }
+article img {
+    width: 100%;
 
+}
 /* Aside */
 
 /* Footer */
+
+/* Class specific */
+/* .pfp {
+    background-image: url(./images/brea-viragh-author-1kx.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 50vh;
+} */
