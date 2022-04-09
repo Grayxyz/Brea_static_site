@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Cormorant+Garamond:ital,wght@0,400;0,700;1,300&display=swap');
 /* Variables */
 :root {
+    --darkGray-alpha: rgba(26, 26, 26, 0.75);
     --bodyFont: 'Cormorant Garamond', Cambria,  Times, 'Times New Roman', Georgia, Cochin, serif;
     --headerFont: 'Cinzel','Cormorant Garamond', Cambria,  Times, 'Times New Roman', Georgia, Cochin, serif;
     --darkGradient: linear-gradient(90deg, #86158A 0%, #3B28A9 100%);
@@ -18,9 +19,12 @@
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--headerFont);
-    margin-block:var(--spaceM);
     padding:unset;
     letter-spacing: calc(var(--spaceS)*.2);
+    margin-block: .5em;
+}
+h1 {
+    font-size: 40px;
 }
 p {
     margin-block:var(--smallMargin);
@@ -31,44 +35,50 @@ body {
     margin:0;
 }
 a {
-    color:unset;
+    color:#06A5FF;
 }
 figure {
     margin: 0;
 }
+/* Wrapper */
+
+.wrapper {
+    background-image: url(./images/blue_space.jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+}
 
 /* Nav */
 nav {
+    background: #1A1A1A;
+    position:sticky;
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: var(--lightGradient);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color:transparent;
+    z-index: 1;
+    perspective: 12rem;
+    overflow: hidden;
+    height: 3rem;
 }
 nav > * {
-    margin-block: var(--spaceS);
+    margin-inline: 1em;
 }
-nav:first-child {
-    margin-inline-start: var(--spaceL);
-}
-nav div:last-child {
-    margin-inline-end: var(--spaceL);
-}
+
+
 /* Header */
 header {
-    background: var(--darkGradient);
-    background-image: url(./images/blue_space.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    padding-block: var(--spaceM);
-    height: 100vh;
+    height: calc(100vh - 3rem);
 }
+
 header img {
     max-width: 50vw;
 }
@@ -80,23 +90,32 @@ main {
     justify-content: flex-start;
    
 }
+
 /* Section */
 section {
     background-color: rgb(50, 44, 112,1);
     padding: var(--spaceM) var(--spaceL) var(--spaceM) var(--spaceL);
 }
+
 article {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--spaceL);
     text-align: justify;
 }
+
 article img {
     width: 100%;
-
 }
 /* Aside */
 
+/* Button */
+button {
+    border: 5px solid var(--lightGradient);
+    background-color:var(--darkGray-alpha);
+
+    }
+}
 /* Footer */
 
 /* Class specific */
