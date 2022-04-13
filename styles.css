@@ -127,18 +127,17 @@ button {
     border-width: 2px;
     border-style: solid;
     border-image: var(--lightGradient) 1;
-    background: linear-gradient(90deg, red 0%, blue 25%, black 75%, white 100%);
+    background: linear-gradient(90deg, #fc1782 0%, #118cff 25%, #3B28A9 75%, #86158A 100%);
     background-size: 200%;
     background-position-x: left 100%;
-    color: var(--blue);
+    color: white;
     font-size: medium;
     padding: .5em;
-    transition: all .5s ease-in-out .2s;
+    transition: all .5s ease-in-out .1s;
     
 }
 button:hover {
     background-position-x: right 100%;
-    color:black;
 }
 
 /* Footer */
