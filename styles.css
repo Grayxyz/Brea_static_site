@@ -1,24 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Cormorant+Garamond:ital,wght@0,400;0,700;1,300&display=swap');
 /* Variables */
 :root {
-    font-size: 16px;
-    --darkGray-alpha: rgba(26, 26, 26, 0.75);
     --bodyFont: 'Cormorant Garamond', Cambria,  Times, 'Times New Roman', Georgia, Cochin, serif;
     --headerFont: 'Cinzel','Cormorant Garamond', Cambria,  Times, 'Times New Roman', Georgia, Cochin, serif;
-    --darkGradient: linear-gradient(90deg, #86158A 0%, #3B28A9 100%);
-    --lightGradient: linear-gradient(90deg, #fc1782 0%, #118cff 100%);
-    --darkMonoAlphaGradient: linear-gradient(90deg, rgba(26, 26, 26, .25) 0%, rgba(0, 0, 0,.1) 100%);
+    --background-1: rgba(25, 25, 25, 1);
+    --background-1-alpha: rgba(25, 25, 25, .5);
+    --background-2: rgba(187, 200, 221, 1);
+    --background-2-alpha: rgba(187, 200, 221, .25);
+    --text-1: rgba(216, 242, 250, 1);
+    --text-1-alpha: rgba(216, 242, 250, .25);
+    --text-2: rgba(25, 25, 25, 1);
+    --text-2-alpha: rgba(25, 25, 25, .25);
+    --link-1: rgba(6, 165, 255, 1);
+    --link-1-alpha: rgba(6, 165, 255, .5);
+    --link-2: rgba(86, 27, 255, 1);
+    --link-2-alpha: rgba(86, 27, 255, .5);
+    --accent-1: rgba(255, 0, 122, 1);
+    --accent-1-alpha: rgba(255, 0, 122, .5);
+    --accent-2: rgba(229, 0, 96, 1);
+    --accent-2-alpha: rgba(229, 0, 96, .5);
     --spaceXL: 6rem;
     --spaceL: 4rem;
     --spaceM: 2rem;
     --spaceS: 1rem;
-    --blue: #06A5FF;
 }
 
 /* Global */
-
+html {
+    font-size: 20px;
+}
 * {
     font-family: var(--bodyFont);
+    text-decoration: none;
 }
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--headerFont);
@@ -86,27 +99,23 @@ header img {
     max-width: 50vw;
 }
 header div {
-    width: 50vw;
     display: flex;
-    flex-direction: row;
+    width:100%;
     justify-content: space-between;
+    max-width: 50vw;
 }
-header div button {
-    margin: 0 1em;
-    width: 100%;
-    display: block;
-}
+
 /* Main */
 main {
     display:flex;
     flex-direction: column;
     justify-content: flex-start;
-   
+    color: var(--text-1);
 }
 
 /* Section */
 section {
-    background-color: rgb(50, 44, 112,1);
+    background-color: var(--background-1);
     padding: var(--spaceM) var(--spaceL) var(--spaceM) var(--spaceL);
 }
 
@@ -123,21 +132,21 @@ article img {
 /* Aside */
 
 /* Button */
-button {
-    border-width: 2px;
-    border-style: solid;
-    border-image: var(--lightGradient) 1;
-    background: linear-gradient(90deg, #fc1782 0%, #118cff 25%, #3B28A9 75%, #86158A 100%);
-    background-size: 200%;
-    background-position-x: left 100%;
-    color: white;
-    font-size: medium;
-    padding: .5em;
-    transition: all .5s ease-in-out .1s;
-    
+button.btn-dark {
+    backdrop-filter: blur(2px);
+    background-color: var(--background-1-alpha);
+    border: 2px solid var(--accent-1);
+    border-radius: 2em;
+    color: var(--link-1);
+    font-family: var(--headerFont);
+    font-size: 20px;
+    margin: .5em;
+    padding: .5em 0;
+    width: 100%;
+    transition: all .25s ease-out .25s;
 }
-button:hover {
-    background-position-x: right 100%;
+button.btn-dark:hover {
+    transform: scale(1.1);
 }
 
 /* Footer */
