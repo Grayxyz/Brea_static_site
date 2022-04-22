@@ -19,6 +19,7 @@
     --accent-1-alpha: rgba(255, 0, 122, .5);
     --accent-2: rgb(179, 0, 173);
     --accent-2-alpha: rgba(229, 0, 96, .5);
+    --accent-3: rgb(115, 39, 247);
     --spaceXL: 6rem;
     --spaceL: 4rem;
     --spaceM: 2rem;
@@ -38,6 +39,14 @@ h1, h2, h3, h4, h5, h6 {
     padding:unset;
     letter-spacing: calc(var(--spaceS)*.2);
     margin-block: .5em;
+    color: var(--accent-3);
+}
+h1, h2, h3 {
+    background: linear-gradient(45deg, var(--accent-1) 0%, var(--accent-3) 100%);
+    background-position: left;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
 }
 h1 {
     font-size: 40px;
@@ -118,7 +127,7 @@ main {
 /* Section */
 section {
     background-color: var(--background-1);
-    padding: var(--spaceM) var(--spaceL) var(--spaceM) var(--spaceL);
+    padding: var(--spaceM) var(--spaceL);
 }
 
 article {
@@ -174,10 +183,23 @@ button:hover {
 }
 
 /* Footer */
-
+footer { 
+    background: var(--background-1);
+    padding: var(--spaceM) var(--spaceL);
+}
+footer .footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+footer .component {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+footer form {
+    display: flex;
+    flex-direction: column;
+}
 /* Class specific */
 
 /* Mailer Form Overlay */
-.ml-form-embed {
-    position: fixed;
-}
