@@ -179,7 +179,7 @@ button::after {
 button:hover {
     transform: scale(1.05, 1.05);
     letter-spacing: .1em;
-    color: var(--text-2)
+
 }
 
 /* Footer */
@@ -188,17 +188,53 @@ footer {
     padding: var(--spaceM) var(--spaceL);
 }
 footer .footer-wrapper {
-    display: flex;
-    justify-content: space-between;
+    min-height: 50vh;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
 }
-footer .component {
-    display: flex;
-    flex-direction: column;
+.component {
+}
+.component * {
+ display: block;
+}
+footer form .text-input {
+    font-family: var(--bodyFont);
+    font-weight: 100;
     width: 100%;
+    margin: 1em 0 .5em 0;
+    background: linear-gradient(45deg, var(--accent-1) 0%, var(--accent-2) 100%);
+    border: 1px solid var(--accent-3);
+    color: var(--text-1);
+    border-radius: .5em;
+    
 }
-footer form {
-    display: flex;
-    flex-direction: column;
+footer #message {
+    min-height: 5em;
+}
+footer .button {
+    position: relative;
+    float:right;
+    backdrop-filter: blur(2px);
+    background-color: transparent;
+    border: 1px solid var(--accent-1);
+    border-radius: 2em;
+    color: var(--link-1);
+    font-family: var(--headerFont);
+    font-size: 20px;
+    margin: .5em;
+    padding: .5em 1em;
+    transition: all .3s ease;
+    overflow: hidden;
+    cursor: pointer; 
+}
+footer .button::after {
+    content: " ";
+    background: linear-gradient(45deg, var(--accent-2) 0%, var(--link-2) 100%);
+    position: absolute;
+    inset: 0 0 0 0;
+    display: block;
+    z-index: -1;
+    transition: all .3s ease;
 }
 /* Class specific */
 
