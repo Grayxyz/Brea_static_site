@@ -45,7 +45,7 @@
             </div>
         </nav>
         <main>
-            <section class="twoCol imageRight">
+            <section class="twoCol imageRight" id="about">
                 <h1>About</h1>
                 <article>
                     <p>Brea Viragh is a USA Today bestselling romance author. She's an avid traveler, sushi addict, and boho dreamer. She earned a Bachelor of Art degree at Berea College, and a dual Master of Science degree from Nova Southeastern University.
@@ -56,18 +56,19 @@
                  </figure>
                 </article>
             </section>
+            <section id="contact">
+                <h1>Get in Touch</h1>
+                <form action="submit">
+                    <input type="text" id="name" placeholder="*Your Name" required>
+                    <input type="email" id="email" placeholder="*e-mail" required>
+                    <input type="text" id="company" placeholder="Company or Organization">
+                    <textarea name="message" id="message" rows="5" placeholder="*Let's connect!"></textarea>
+                    <button type="submit">Send</button>
+
+                </form>
+            </section>
         </main>
         <footer>
-            <article class="component">
-                <h2>Get in touch</h2>
-                <form>
-                    <input class="text-input" type="text" name="firstName" id="firstName" value="First name">
-                    <input class="text-input" type="text" name="lastName" id="lastName" value="Last name">
-                    <input class="text-input" type="email" name="email" id="email" value="email">
-                    <input class="text-input" type="text" name="message" id="message" value="Message">
-                    <input type="submit" value="submit" class="button">
-                </form>
-            </article>
             <article class="component">
                 <h2>Quick Links</h2>
                 <a href="#contact">Contact</a>
