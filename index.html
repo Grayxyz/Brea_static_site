@@ -23,61 +23,74 @@
     
 </head>
 <body>
-    <div class="wrapper">
-        <header>
-            <img src="./images/Brea Logo White.svg" alt="Brea Virah sweet with heat logo">
-            <div>
-                <h2>Hot Off the Press!</h2>
-                <p>Get <strong>Two Free books</strong> and news about the latest releases delivered to your mailbox</p>
-                <button onclick="ml_account('webforms', '1189150', 'n7j6h2', 'show')" class="button">
-                    Sign me up!
-                  </button>
-            </div>
-        </header>
-        <nav>
-            <h3>Brea Viragh</h3>
-            <div>
-                <a href="#contact">Contact</a>
-                <a href="#about">About</a>
-                <a href="books.html">Books</a>
-                <a href="books.html#shop">Shop</a>
-            </div>
-        </nav>
-        <main>
-            <section class="twoCol imageRight" id="about">
-                <h1>About</h1>
-                <article>
-                    <p>Brea Viragh is a USA Today bestselling romance author. She's an avid traveler, sushi addict, and boho dreamer. She earned a Bachelor of Art degree at Berea College, and a dual Master of Science degree from Nova Southeastern University.
-                    She has written many genres including contemporary small town, paranormal romance, paranormal and urban fantasy, and all hot enough to scorch the pages. Her heroines don’t shy away from dark, realistic situations as they navigate her elegantly crafted worlds. There may be some hard some hard lessons along the way, but Brea’s characters need not look outside themselves to find home on their way to happily ever after.
-                    Brea loves all things magical. She is proud Gryffindor, a member of the Fairy Tail Guild, and a Brakebills University for Magical Pedagogy alumna. It is her personal opinion that a rainy day is best spent curled up on the couch with a book, coffee, and pet snuggles. She currently lives in the Blue Ridge mountains of Virginia with her dog and 3 cats.<br><br>For all the latest releases and updates on exclusive readers, subscribe to Brea’s <a href="#newsletter">newsletter</a> today!</p>
-                    <figure>
-                    <img src="./images/brea-viragh-author-1kx.jpg" alt="Brea Viragh profile photo" style="max-width: 1000px;">
-                 </figure>
-                </article>
-            </section>
-            <section id="contact">
-                <h1>Get in Touch</h1>
-                <form action="submit">
-                    <input type="text" id="name" placeholder="*Your Name" required>
-                    <input type="email" id="email" placeholder="*e-mail" required>
-                    <input type="text" id="company" placeholder="Company or Organization">
-                    <textarea name="message" id="message" rows="5" placeholder="*Let's connect!"></textarea>
-                    <button type="submit">Send</button>
+    <nav class="three-col">
+        <h3>Brea Viragh</h3>
+        <div>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+            <a href="books.html">Books</a>
+            <a href="books.html#shop">Shop</a>
+            <a href="advanced-reader.html">Early Access</a>
+        </div>
+    </nav>
+    <header>
+        <!-- <div class="parallax-bg"> </div> -->
+        <img src="./images/Brea Logo White.svg" alt="Brea Virah sweet with heat logo">
+        <div class="cta">
+            <h2>Hot Off the Press!</h2>
+            <p>Get <strong>Two Free books</strong> and news about the latest releases delivered to your mailbox</p>
+            <button onclick="ml_account('webforms', '1189150', 'n7j6h2', 'show')" class="button">
+                Sign me up!
+              </button>
+        </div>
+    </header>
+    <section id="about" class="three-col">
+        <h1>About</h1>
+        <article>
+            <p>Brea Viragh is a USA Today bestselling romance author. She's an avid traveler, sushi addict, and boho dreamer. She earned a Bachelor of Art degree at Berea College, and a dual Master of Science degree from Nova Southeastern University.
+            She has written many genres including contemporary small town, paranormal romance, paranormal and urban fantasy, and all hot enough to scorch the pages. Her heroines don’t shy away from dark, realistic situations as they navigate her elegantly crafted worlds. There may be some hard some hard lessons along the way, but Brea’s characters need not look outside themselves to find home on their way to happily ever after.
+            Brea loves all things magical. She is proud Gryffindor, a member of the Fairy Tail Guild, and a Brakebills University for Magical Pedagogy alumna. It is her personal opinion that a rainy day is best spent curled up on the couch with a book, coffee, and pet snuggles. She currently lives in the Blue Ridge mountains of Virginia with her dog and 3 cats.<br><br>For all the latest releases and updates on exclusive readers, subscribe to Brea’s <a href="#newsletter">newsletter</a> today!</p>
+        </article>
+        <figure>
+        <img src="./images/brea-viragh-author-1kx.jpg" alt="Brea Viragh profile photo" style="max-width: 1000px;">
+     </figure>
+    </section>
+    <section class="three-col features" id="testimonials">
+        <div class="block">
+            <h2>Jane Doe</h2>
+            <p>A very nice testimonial</p>
+        </div>
+        <div class="block">
+            <h2>Jane Doe</h2>
+            <p>A very nice testimonial</p>
+        </div>
+        <div class="block">
+            <h2>Jane Doe</h2>
+            <p>A very nice testimonial</p>
+        </div>
+    </section>
+    <section id="contact">
+        <h1>Get in Touch</h1>
+        <form action="submit">
+            <input type="text" id="name" placeholder="*Your Name" required>
+            <input type="email" id="email" placeholder="*e-mail" required>
+            <input type="text" id="company" placeholder="Company or Organization">
+            <textarea name="message" id="message" rows="5" placeholder="*Let's connect!"></textarea>
+            <button type="submit">Send</button>
 
-                </form>
-            </section>
-        </main>
-        <footer>
-            <div>
-                <h2>Quick Links</h2>
-                <a href="#contact">Contact</a>
-                <a href="#about">About</a>
-                <a href="books.html">Books</a>
-                <a href="books.html#shop">Shop</a>
-            </div>
-                <p>Site Design &#169; 2022 <a href="https://grayjay.xyz">Gray Jay LLC</a></p>
+        </form>
+    </section>
+    <footer>
+        <div>
+            <h2>Quick Links</h2>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+            <a href="books.html">Books</a>
+            <a href="books.html#shop">Shop</a>
+            <a href="advanced-reader.html">Early Access</a>
+        </div>
+            <p>Site Design &#169; 2022 <a href="https://grayjay.xyz">Gray Jay LLC</a></p>
         
-        </footer>
-    </div>
+    </footer>
 </body>
 </html>
