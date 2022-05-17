@@ -161,10 +161,36 @@ section figure {
     line-height: 2rem;
 } */
 /****** Modular styles *****/
-.three-col {
+.three-col,
+.six-col {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    
+}
+.three-col {
     gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.six-col {
+    grid-template-columns: repeat(6, 1fr);
+}
+.two-block {
+    padding: 0;
+    text-align: center;
+    align-content: stretch;
+    height: 50vw;
+}
+.lblock,
+.rblock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.lblock{
+    grid-column: 1 / span 3;
+    background-color: var(--background-3);
+}
+.rblock {
+    grid-column: 4 / span 3;
 }
 
 .block {
