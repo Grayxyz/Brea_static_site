@@ -69,29 +69,73 @@ img {
     width: 100%;
     height: auto;
 }
+button {
+    background-color: rgba(0,0,0,.75);
+    border: 1px solid white;
+    outline: 1px solid white;
+    outline-offset: 1rem;
+    padding: 1rem;
+    color: white;
+    min-width: fit-content;
+    width: 50%;
+    margin: 0 auto;
+}
+/* *** Call to Action *** */
+.cta {
+    background-color: rgba(0,0,0,.7);
+    display: grid;
+    align-content: center;
+    padding: 2rem;
+}
+/*  **** Row Call to Action **** */
+.cta-row {
+    background: 
+     /*Image fade overlay  */
+    linear-gradient(
+        90deg,
+      rgba(0, 0, 0, 0.5), 
+      rgba(0, 0, 0, 0.25)
+    ),
+    /* bottom, image */
+    url(images/Vienna\ Blue\ Mockup.jpg);
+    background-position: bottom;
+    background-size: cover;
+    align-content:stretch;
+    
+    text-align: center;
+}
 
+.cta-row-content{
+    grid-column: 1 / span 3;
+}
+.cta-row-action {
+    grid-column: 4 / span 3;
+}
 
+/* *** Header Call to Action */
 header {
-    display: flex;
-    flex-direction: column;
+    height: calc(100vh - 3rem);
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
     align-items: center;
-    justify-content: center;
+    align-content: stretch;
+    column-gap: 2rem;
     background: url(images/blue_space.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
     position: relative;
-     height: calc(100vh - 3rem)
+    
 }
 
 header .cta,
  header img {
     text-align: center;
-    width: 50%;
-    margin: 1rem auto;
+    grid-column: 2 / span 4;
+
 }
 header .cta {
-    background-color: var(--accent-3);
+    
 }
 
  /* *** Navigation bar*** */
@@ -152,32 +196,3 @@ section {
     align-content: center;
 }
 
-/*  **** Row Call to Action **** */
-.cta-row {
-    background: 
-     /*Image fade overlay  */
-    linear-gradient(
-        90deg,
-      rgba(0, 0, 0, 0.5), 
-      rgba(0, 0, 0, 0.25)
-    ),
-    /* bottom, image */
-    url(images/Vienna\ Blue\ Mockup.jpg);
-    background-position: bottom;
-    background-size: cover;
-    align-content:stretch;
-    height: 50vh;
-    text-align: center;
-}
-.cta-row-content,
-.cta-row-action {
-    display: grid;
-    align-content: center;
-}
-.cta-row-content{
-    grid-column: 1 / span 3;
-    background-color: var(--background-3);
-}
-.cta-row-action {
-    grid-column: 4 / span 3;
-}
