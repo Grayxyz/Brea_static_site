@@ -17,7 +17,7 @@
     --link-1-alpha: rgba(6, 165, 255, .5);
     --link-2: rgba(86, 27, 255, 1);
     --link-2-alpha: rgba(86, 27, 255, .5);
-    --accent-1: rgba(255, 0, 122, 1);
+    --accent-1: rgb(94, 53, 206);
     --accent-1-alpha: rgba(255, 0, 122, .5);
     --accent-2: rgb(179, 0, 173);
     --accent-2-alpha: rgba(229, 0, 96, .5);
@@ -70,15 +70,29 @@ img {
     height: auto;
 }
 button {
-    background-color: rgba(0,0,0,.75);
-    border: 1px solid white;
-    outline: 1px solid white;
-    outline-offset: 1rem;
+    position: relative;
+    background-color: var(--accent-1);
+    border: none;
     padding: 1rem;
     color: white;
     min-width: fit-content;
     width: 50%;
     margin: 0 auto;
+    font-family: var(--headerFont);
+    letter-spacing: .2em;
+    box-shadow: 1em .5em 1em  rgba(0,0,0,.5);
+    outline: 1px solid white;
+    outline-offset: -0.5rem;
+    
+}
+
+
+/*  **** Content Heights *** */
+.full-height {
+    height: calc(100vh - 3rem);
+}
+.half-height {
+    min-height: calc(50vh - 3rem);
 }
 /* *** Call to Action *** */
 .cta {
@@ -86,6 +100,8 @@ button {
     display: grid;
     align-content: center;
     padding: 2rem;
+    outline: 1px solid #7a7a7a;
+    outline-offset: -1rem;
 }
 /*  **** Row Call to Action **** */
 .cta-row {
@@ -114,7 +130,6 @@ button {
 
 /* *** Header Call to Action */
 header {
-    height: calc(100vh - 3rem);
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     align-items: center;
@@ -133,9 +148,6 @@ header .cta,
     text-align: center;
     grid-column: 2 / span 4;
 
-}
-header .cta {
-    
 }
 
  /* *** Navigation bar*** */
@@ -194,5 +206,10 @@ section {
     display: grid;
     grid-auto-rows: max-content;
     align-content: center;
+    outline: 1px solid white;
+    outline-offset: -1rem;
 }
-
+/* *** Contact Sections *** */
+#contact form {
+    grid-column: 3 / span 4;
+}
