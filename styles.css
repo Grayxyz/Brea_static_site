@@ -42,7 +42,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--headerFont);
     letter-spacing: .2em;
-    margin: 0 0 1rem 0;
+    margin: 0;
 }
 h1 {
     font-size: 3rem;
@@ -89,7 +89,7 @@ button {
 
 /*  **** Content Heights *** */
 .full-height {
-    height: calc(100vh - 3rem);
+    height: 100vh;
 }
 .half-height {
     min-height: calc(50vh - 3rem);
@@ -132,15 +132,15 @@ button {
 header {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 10vh 60vh 20vh 10vh;
     align-items: center;
     align-content: stretch;
     column-gap: 2rem;
     background: url(images/blue_space.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: top;
-    position: relative;
-    
+    position:relative;
+    top:-3rem;
 }
 
 header .cta,
@@ -148,6 +148,13 @@ header .cta,
     text-align: center;
     grid-column: 2 / span 4;
 
+}
+header img {
+    max-height: 45vh;
+    grid-row: 2 /3;
+}
+header .cta {
+    grid-row: 3 / 4;
 }
 
  /* *** Navigation bar*** */
@@ -211,5 +218,10 @@ section {
 }
 /* *** Contact Sections *** */
 #contact form {
-    grid-column: 3 / span 4;
+    grid-column: 1 / span 4;
+}
+#contact input, #contact textarea {
+    display: block;
+    background-color: none;
+    font-family: var(--bodyFont);
 }
