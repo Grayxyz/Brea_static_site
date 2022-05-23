@@ -218,7 +218,6 @@ footer {
 .footer-block + .footer-block::before {
     content: " ";
     background-color: white;
-    display: inline-block;
     height: 100%;
     position: relative;
     float: left;
