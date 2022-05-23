@@ -70,26 +70,33 @@ img {
     height: auto;
 }
 button {
-    position: relative;
+    
     background-color: var(--accent-1);
     border: none;
     padding: 1rem;
     color: white;
-    min-width: fit-content;
-    width: 50%;
+    min-width: 50%;
     margin: 0 auto;
     font-family: var(--headerFont);
     letter-spacing: .2em;
     box-shadow: 1em .5em 1em  rgba(0,0,0,.5);
     outline: 1px solid white;
-    outline-offset: -0.5rem;
-    
+    outline-offset: -0.5rem; 
 }
-
+input,
+textarea {
+    font-family: var(--bodyFont);
+    padding: .5em 1em;
+    border: 1px solid var(--accent-2);
+    background-color: unset;
+    color: var(--text-1);
+    resize: vertical;
+    margin:0 0 1rem 0;
+}
 
 /*  **** Content Heights *** */
 .full-height {
-    height: 100vh;
+    height: calc(100vh - 3rem);
 }
 .half-height {
     min-height: calc(50vh - 3rem);
@@ -140,7 +147,6 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     position:relative;
-    top:-3rem;
 }
 
 header .cta,
@@ -191,7 +197,41 @@ section {
     background-color: black;
     padding: 4rem;
 }
+/* *** Footer *** */
+footer {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2rem;
+    background-color: black;
+    padding: 4rem;
+    text-align: center;
+}
+.footer-block {
+    grid-column: span 2;
+}
+.footer-block + .footer-block::before {
+    content: " ";
+    background-color: white;
+    display: inline-block;
+    height: 100%;
+    position: relative;
+    float: left;
+    width: 1px;
+}
+.copyright {
+    grid-column:1 / 7;
+}
+footer .footer-block ul {
+    list-style: none;
+    margin: 0;
+    padding:0;
+    line-height: 1.5rem;
+
+}
 /* ***** Content Sections ***** */
+.content {
+    grid-template-rows: min-content 1fr;
+}
 .content article {
     grid-column: 1 / span 3;
 }
@@ -217,11 +257,28 @@ section {
     outline-offset: -1rem;
 }
 /* *** Contact Sections *** */
+#contact img {
+    grid-column:1 / span 2;
+    justify-self: end;
+}
 #contact form {
-    grid-column: 1 / span 4;
+    grid-column: 3 / span 4;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-around;
+
 }
-#contact input, #contact textarea {
+#contact form input, #contact form textarea {
     display: block;
-    background-color: none;
-    font-family: var(--bodyFont);
+    grid-column: 1 / span 3;
 }
+#contact form textarea {
+    height: 100%;
+    justify-self: stretch;
+}
+#contact form button {
+    align-self: flex-end;
+    margin:0;
+}
+

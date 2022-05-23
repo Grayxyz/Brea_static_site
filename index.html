@@ -23,6 +23,17 @@
     
 </head>
 <body>
+    <header class="full-height">
+        <!-- <div class="parallax-bg"> </div> -->
+        <img src="./images/Brea Logo White.svg" alt="Brea Virah sweet with heat logo">
+        <div class="cta">
+            <h2>Hot Off the Press!</h2>
+            <p>Stay up to date with the lastest releases and get <strong>Two Free books</strong> delivered to your mailbox today!</p>
+            <button onclick="ml_account('webforms', '1189150', 'n7j6h2', 'show')" class="button">
+                Sign me up!
+            </button>
+        </div>
+    </header>
     <nav class="three-col">
         <h3>Brea Viragh</h3>
         <div>
@@ -33,17 +44,6 @@
             <a href="advanced-reader.html">Early Access</a>
         </div>
     </nav>
-    <header class="full-height">
-        <!-- <div class="parallax-bg"> </div> -->
-        <img src="./images/Brea Logo White.svg" alt="Brea Virah sweet with heat logo">
-        <div class="cta">
-            <h2>Hot Off the Press!</h2>
-            <p>Stay up to date with the lastest releases and get <strong>Two Free books</strong> delivered to your mailbox today!</p>
-            <button onclick="ml_account('webforms', '1189150', 'n7j6h2', 'show')" class="button">
-                Sign me up!
-              </button>
-        </div>
-    </header>
 
     <section id="about" class="three-col content full-height">
         <h1>About</h1>
@@ -79,26 +79,55 @@
         </div>
     </section>
 
-    <section id="contact" class="half-height">
-        <h1>Get in Touch</h1>
-        <form action="submit">
+    <section id="contact" class="half-heigh content">
+        <h1>Contact Me</h1>
+        <img src="/images/Envelope Vector.svg" alt="email message icon">
+        <form action="https://formsubmit.co/grayjay.xyz@gmail.com" method="POST">
             <input type="text" id="name" placeholder="*Your Name" required>
             <input type="email" id="email" placeholder="*e-mail" required>
-            <input type="text" id="company" placeholder="Company or Organization">
-            <textarea name="message" id="message" rows="5" placeholder="*Let's connect!"></textarea>
+            <textarea name="message" id="message" rows="5" placeholder="*Message"></textarea>
+            <!-- Hidden fields for formsumit.co-->
+            <input type="hidden" name="_subject" value="New web form message from breaviragh.com!">
+            <input type="text" name="_honey" style="display:none">
+            <input type="hidden" name="_next" value="contact-form-success.html">
             <button type="submit">Send</button>
         </form>
     </section>
     <footer>
-        <div>
-            <h2>Quick Links</h2>
-            <a href="#contact">Contact</a>
-            <a href="#about">About</a>
-            <a href="books.html">Books</a>
-            <a href="books.html#shop">Shop</a>
-            <a href="advanced-reader.html">Early Access</a>
+        <div class="footer-block">
+            <h3>Quick Links</h3>
+            <ul>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="books.html">Books</a></li>
+            <li><a href="books.html#shop">Shop</a></li>
+            <li><a href="advanced-reader.html">Early Access</a></li>
+            </ul>
+            
         </div>
-            <p>Site Design &#169; 2022 <a href="https://grayjay.xyz">Gray Jay LLC</a></p>
+        <div class="footer-block">
+            <h3>Quick Links</h3>
+            <ul>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="books.html">Books</a></li>
+            <li><a href="books.html#shop">Shop</a></li>
+            <li><a href="advanced-reader.html">Early Access</a></li>
+            </ul>
+            
+        </div>
+        <div class="footer-block">
+            <h3>Quick Links</h3>
+            <ul>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="books.html">Books</a></li>
+            <li><a href="books.html#shop">Shop</a></li>
+            <li><a href="advanced-reader.html">Early Access</a></li>
+            </ul>
+            
+        </div>
+            <p class="copyright">Site Design &#169; 2022 <a href="https://grayjay.xyz">Gray Jay LLC</a></p>
         
     </footer>
 </body>
