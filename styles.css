@@ -60,6 +60,10 @@ p {
     margin: 0 0 1rem 0;
     line-height: 2rem;
 }
+q {
+    font-style: italic;
+    font-weight: 100;
+}
 a {
     text-decoration: none;
     color: var(--link-1);
@@ -100,6 +104,8 @@ textarea {
 }
 .half-height {
     min-height: calc(50vh - 3rem);
+    max-height: max-content;
+    align-items: center;
 }
 /* *** Call to Action *** */
 .cta {
@@ -251,10 +257,14 @@ footer .footer-block ul {
     grid-column: span 2;
     text-align: center;
     display: grid;
-    grid-auto-rows: max-content;
-    align-content: center;
-    outline: 1px solid white;
+    grid-template-rows: 1fr 5rem;
+    align-items: center;
     outline-offset: -1rem;
+    outline: 1px solid white;
+    padding: 2rem;
+}
+.features .block h2 {
+    align-self: flex-start;
 }
 /* *** Contact Sections *** */
 #contact img {
@@ -281,4 +291,7 @@ footer .footer-block ul {
     align-self: flex-end;
     margin:0;
 }
-
+/* *** Testimonials *** */
+#testimonials h2::before {
+    content:"—";
+}
