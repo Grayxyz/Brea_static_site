@@ -100,7 +100,7 @@ textarea {
 
 /*  **** Content Heights *** */
 .full-height {
-    height: calc(100vh - 3rem);
+    min-height: calc(100vh - 3rem);
 }
 .half-height {
     min-height: calc(50vh - 3rem);
@@ -245,6 +245,13 @@ footer .footer-block ul {
     grid-column: 4 / span 3;
 }
 
+/* *** About *** */
+@media screen and (max-width: 900px){
+    #about article,
+    #about img {
+        grid-column: span 6;
+    }
+}
 /* **** Featured Content Blocks ***** */
 .features {
     background-color: var(--background-3);
@@ -252,7 +259,7 @@ footer .footer-block ul {
 }
 .block {
     background-color: var(--accent-3);
-    height: calc(100vw / 3 - 8rem);
+    height: 100%;
     grid-column: span 2;
     text-align: center;
     display: grid;
@@ -261,9 +268,29 @@ footer .footer-block ul {
     outline-offset: -1rem;
     outline: 1px solid white;
     padding: 2rem;
+    gap: 2rem;
 }
-.features .block h2 {
+.block * {
+    margin:0 auto;
+}
+.features .block h3 {
     align-self: flex-start;
+}
+#testimonials h3::before {
+    content:" ";
+    width: 100%;
+    height: 1px;
+    background-color: var(--background-2);
+    position: relative;
+    display: block;
+    top:-1rem;
+    margin: 0 auto;
+}
+@media screen and (max-width: 760px) {
+    .features .block {
+        grid-column: 1 / span 6;
+        height: fit-content;
+    }
 }
 /* *** Contact Sections *** */
 #contact img {
@@ -289,8 +316,4 @@ footer .footer-block ul {
 #contact form button {
     align-self: flex-end;
     margin:0;
-}
-/* *** Testimonials *** */
-#testimonials h2::before {
-    content:"—";
 }
