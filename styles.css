@@ -22,9 +22,7 @@
     --accent-2: rgb(179, 0, 173);
     --accent-2-alpha: rgba(229, 0, 96, .5);
     --accent-3: rgb(52, 6, 151);
-    --break-1: 900px;
-    --break-2: 715px;
-    --break-3: 400px;
+  ;
 }
 
 /* Global */
