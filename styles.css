@@ -22,10 +22,9 @@
     --accent-2: rgb(179, 0, 173);
     --accent-2-alpha: rgba(229, 0, 96, .5);
     --accent-3: rgb(52, 6, 151);
-    --spaceXL: 6rem;
-    --spaceL: 4rem;
-    --spaceM: 2rem;
-    --spaceS: 1rem;
+    --break-1: 900px;
+    --break-2: 700px;
+    --break-3: 400px;
 }
 
 /* Global */
@@ -55,6 +54,17 @@ h1::after {
     width: 100%;
     background-color: var(--accent-1);
     margin: 1rem 0 0 0;
+}
+@media screen and (max-width: 700px) {
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.25rem;
+    }
+}
+@media screen and (max-width: 420px) {
+
 }
 p {
     margin: 0 0 1rem 0;
@@ -97,7 +107,6 @@ textarea {
     resize: vertical;
     margin:0 0 1rem 0;
 }
-
 /*  **** Content Heights *** */
 .full-height {
     min-height: calc(100vh - 3rem);
@@ -140,19 +149,24 @@ textarea {
 .cta-row-action {
     grid-column: 4 / span 3;
 }
-
+@media screen and (max-width: 700px) {
+    .cta-row-content, 
+    .cta-row-action {
+        grid-column: 1 / span 6;
+    }
+}
 /* *** Header Call to Action */
-header {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: 10vh 60vh 20vh 10vh;
-    align-items: center;
-    align-content: stretch;
-    column-gap: 2rem;
+header.full-height{
+    min-height: unset;
+    height: calc(100vh - 11rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     background: url(images/blue_space.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     position:relative;
+    padding: 4rem;
 }
 
 header .cta,
@@ -168,7 +182,12 @@ header img {
 header .cta {
     grid-row: 3 / 4;
 }
-
+@media screen and (max-width: 700px) {
+    header.full-height {
+        height: calc(100vh - 3rem);
+        padding:0  1rem;
+    }
+}
  /* *** Navigation bar*** */
 nav {
     display: grid;
@@ -194,7 +213,18 @@ nav div{
     display: flex;
     justify-content: space-between;
 }
-
+@media screen and (max-width: 700px) {
+    nav {
+        padding: 0 2rem;
+        top: calc(100vh - 3rem);
+    }
+    nav h3 {
+        display: none;
+    }
+    nav div {
+        grid-column: 1 / span 6;
+    }
+}
 /*  *** Section *** */
 section {
     display: grid;
@@ -202,6 +232,11 @@ section {
     gap: 2rem;
     background-color: black;
     padding: 4rem;
+}
+@media screen and (max-width: 700px) {
+    section {
+        padding: 2rem;
+    }
 }
 /* *** Footer *** */
 footer {
@@ -211,6 +246,11 @@ footer {
     background-color: black;
     padding: 4rem;
     text-align: center;
+}
+@media screen and (max-width: 700px) {
+    footer {
+        padding: 2rem;
+    }
 }
 .footer-block {
     grid-column: span 2;
@@ -233,6 +273,24 @@ footer .footer-block ul {
     line-height: 1.5rem;
 
 }
+@media screen and (max-width: 700px) {
+    .footer-block {
+        grid-column: span 6;
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-block + .footer-block::before {
+        content: " ";
+        background-color: white;
+        grid-column: 3 / span 2;
+        width: 8rem;
+        height: 1px;
+        position: relative;
+        margin: 0 auto;
+        display: block;
+        top: -1rem;
+    }
+}
 /* ***** Content Sections ***** */
 .content {
     grid-template-rows: min-content 1fr;
@@ -246,7 +304,7 @@ footer .footer-block ul {
 }
 
 /* *** About *** */
-@media screen and (max-width: 900px){
+@media screen and (max-width: 900px) {
     #about article,
     #about img {
         grid-column: span 6;
@@ -286,7 +344,7 @@ footer .footer-block ul {
     top:-1rem;
     margin: 0 auto;
 }
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 900px) {
     .features .block {
         grid-column: 1 / span 6;
         height: fit-content;
@@ -297,6 +355,7 @@ footer .footer-block ul {
     grid-column:1 / span 2;
     justify-self: end;
 }
+
 #contact form {
     grid-column: 3 / span 4;
     display: flex;
@@ -316,4 +375,15 @@ footer .footer-block ul {
 #contact form button {
     align-self: flex-end;
     margin:0;
+}
+@media screen and (max-width: 700px) {
+    #contact img {
+        display: none;
+    }
+    #contact form {
+        grid-column: 1 / span 6;
+    }
+    #contact form button {
+        align-self: center;
+    }
 }
