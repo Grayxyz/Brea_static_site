@@ -6,3 +6,4 @@ deployment:
     - /bin/cp -R styles.css $DEPLOYPATH
     - /bin/cp -R contact-confirmation.html $DEPLOYPATH
     - /bin/cp -R images $DEPLOYPATH
+    - /bin/rm -R .vscode
