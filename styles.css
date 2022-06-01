@@ -95,6 +95,9 @@ button {
     outline: 1px solid white;
     outline-offset: -0.5rem; 
 }
+button:hover {
+    background-color: ;
+}
 input,
 textarea {
     font-family: var(--bodyFont);
