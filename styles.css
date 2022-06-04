@@ -4,7 +4,7 @@
     --bodyFont: 'Cormorant Garamond', Cambria,  Times, 'Times New Roman', Georgia, Cochin, serif;
     --headerFont: 'Cinzel','Cormorant Garamond', Cambria,  Times, 'Times New Roman', Georgia, Cochin, serif;
     --background-1: rgb(31, 15, 65);
-    --background-1-alpha: rgba(31, 15, 65, .75);
+    --background-1-alpha: rgba(18, 14, 28, .85);
     --background-2: rgba(187, 200, 221, 1);
     --background-2-alpha: rgba(187, 200, 221, .25);
     --background-3: rgb(8, 22, 45);
@@ -76,13 +76,19 @@ a {
     text-decoration: none;
     color: var(--link-1);
     font-weight: bold;
+    transition: all .25s ease;
+    font-weight: 100;
+}
+a:hover {
+    color: var(--accent-2);
+    text-decoration: underline;
 }
 img {
     width: 100%;
     height: auto;
 }
 button {
-    
+    cursor: pointer;
     background-color: var(--accent-1);
     border: none;
     padding: 1rem;
@@ -93,10 +99,12 @@ button {
     letter-spacing: .2em;
     box-shadow: 1em .5em 1em  rgba(0,0,0,.5);
     outline: 1px solid white;
-    outline-offset: -0.5rem; 
+    outline-offset: -0.5rem;
+    transition: all .25s ease;
 }
 button:hover {
-    background-color: ;
+    background-color: var(--accent-2);
+    transform: scale(1.1);
 }
 input,
 textarea {
@@ -247,11 +255,6 @@ footer {
     padding: 4rem;
     text-align: center;
 }
-@media screen and (max-width: 715px) {
-    footer {
-        padding: 2rem;
-    }
-}
 .footer-block {
     grid-column: span 2;
 }
@@ -268,14 +271,34 @@ footer {
 .copyright {
     grid-column:1 / 7;
 }
+.social-logo-link {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-around;
+    align-items: center;
+    justify-items: start;
+    align-content: center;
+}
+.social-logo {
+    height: 1.5rem;
+    width: auto;
+    justify-self: flex-end;
+    position: relative;
+    right: 25%;
+}
 footer .footer-block ul {
     list-style: none;
     margin: 0;
     padding:0;
-    line-height: 1.5rem;
-
+    display: grid;
+    grid-auto-rows: 2.5rem;
+    align-items: center;
+    
 }
 @media screen and (max-width: 715px) {
+    footer {
+        padding: 2rem;
+    }
     .footer-block {
         grid-column: span 6;
         display: flex;
@@ -291,6 +314,12 @@ footer .footer-block ul {
         margin: 0 auto;
         display: block;
         top: -1rem;
+    }
+    .social-logo-link {
+        grid-template-columns: 1fr 1fr;
+    }
+    .social-logo {
+        right: 10%;
     }
 }
 /* ***** Content Sections ***** */
