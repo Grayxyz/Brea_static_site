@@ -21,7 +21,7 @@ for(let i = 0; i < bookList.length; i++) {
     let tile = document.createElement('div');
     let cover = bookList[i].coverImage;
     cover = cover.replace("https://breaviragh.com", "..");
-    tile.innerHTML = `<h3>${bookList[i].title}</h3><img src="${cover}" alt="${bookList[i].title} cover image">`;
+    tile.innerHTML = `<h4>${bookList[i].title}</h4><img src="${cover}" alt="${bookList[i].title} cover image">`;
     function bookPage() {
         window.open(bookList[i].amazon, '_blank');
     }
