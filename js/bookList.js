@@ -6,19 +6,26 @@ const response = await fetch('js/bookList.json');
 if (response.ok) {
     let json = await response.json();
     for(let i = 0; i < json.length; i++){
-        if (json[i].active == true) {
+        if (json[i].active == true && json[i].coverImage !== "") {
         bookList.push(json[i]);
-    }
+    } else {
+        console.log(`${json[i].title} active: ${json[i].active}`);
+        }
     }
 } else {
     alert (`HTTP-Error: ${response.status}`);
-}
+    }
 const bookGrid = document.getElementById("bookGrid");
 
-for (let i = 0; i < bookList.length; i++) {
-    let title = document.createElement('h3');
-    title.innerHTML = bookList[i].title;
-    let bookTile = document.createElement('div').appendChild(title);
-    bookGrid.appendChild(bookTile);
-    console.log(`Title ${i+1}: ${bookList[i].title}`);
+for(let i = 0; i < bookList.length; i++) {
+    let tile = document.createElement('div');
+    let cover = bookList[i].coverImage;
+    cover = cover.replace("https://breaviragh.com", "..");
+    tile.innerHTML = `<h3>${bookList[i].title}</h3><img src="${cover}" alt="${bookList[i].title} cover image">`;
+    function bookPage() {
+        window.open(bookList[i].amazon, '_blank');
+    }
+    tile.addEventListener("click", bookPage);
+    tile.className = 'bookTile';
+    bookGrid.appendChild(tile);
 }
