@@ -246,6 +246,10 @@ section {
         padding: 2rem;
     }
 }
+.four-col {
+    grid-template-columns: repeat(4, 1fr);
+}
+
 /* *** Footer *** */
 footer {
     display: grid;
@@ -419,4 +423,24 @@ footer .footer-block ul {
     #contact form button {
         align-self: center;
     }
+}
+/* Book Grid */
+.bookTile {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-1);
+}
+.bookTile h4 {
+    margin: 2rem 2rem 1rem 2rem;
+   
+}
+.bookTile img:hover {
+    transform: scale(101%, 101%);
+}
+.bookTile img {
+    max-width: calc(100% - 4rem);
+    margin: 1rem 2rem 2rem 2rem;
 }
