@@ -18,6 +18,9 @@ if (response.ok) {
 const bookGrid = document.getElementById("bookGrid");
 
 for(let i = 0; i < bookList.length; i++) {
+    if(bookList[i].series == "Minnesota Raiders Novel" || bookList[i].series == "Arizona Rattlesnakes Novel"){
+        console.log("this title has been removed at the request of Pippa Grant.")
+    }
     let tile = document.createElement('div');
     let cover = bookList[i].coverImage;
     cover = cover.replace("https://breaviragh.com", "..");
